@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS171 - Homework Week 6</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>FIFA World Cup<sup>TM</sup></h1>
+    <h2>All Time Statistics</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <div class="row">
+                    <div class="col-sm-auto">
+                        <form class="form-inline">
+                            <label for="data-type">Chart Data:</label>
+                            <select id="data-type" value="GOALS">
+                                <option value="GOALS">Goals</option>
+                                <option value="AVERAGE_GOALS">Average Goals</option>
+                                <option value="MATCHES">Matches</option>
+                                <option value="TEAMS">Teams</option>
+                                <option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form class="form-inline">
+                            <label for="year-lb">Years:</label>
+                            <input type="text" id="year-lb" size="10" value="1930">
+                            <label for="year-ub">to</label>
+                            <input type="text" id="year-ub" size="10" value="2014">
+                            <button type="button" class="btn btn-success btn-sm" id="year-button">Filter</button>
+                            <p class="note">Possible year range spans from 1930-2014</p>
+                        </form>
+                    </div>
+                    <p class="note2">Click on points to see detailed data.</p>
+                </div>
+                <div class="row">
+                    <div id="chart-area"></div>
+                </div>
+            </div>
+            <div class="col-5">
+                <h4 id="cupTitle">Hello</h4>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Location</th>
+                        <td id="tbl_location"></td>
+                    </tr>
+                    <tr>
+                        <th>Teams</th>
+                        <td id="tbl_teams"></td>
+                    </tr>
+                    <tr>
+                        <th>Matches</th>
+                        <td id="tbl_matches"></td>
+                    </tr>
+                    <tr>
+                        <th>Goals</th>
+                        <td id="tbl_goals"></td>
+                    </tr>
+                    <tr>
+                        <th>Avg Goals</th>
+                        <td id="tbl_avgGoals"></td>
+                    </tr>
+                    <tr>
+                        <th>Avg Attendance</th>
+                        <td id="tbl_avgAttendance"></td>
+                    </tr>
+                    <tr>
+                        <th>Winner</th>
+                        <td id="tbl_winner"></td>
+                    </tr>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- embedding JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+
+<!-- Your implementation -->
+<script src="js/main.js"></script>
+</body>
+</html>
